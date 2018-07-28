@@ -6,10 +6,10 @@
 </head>
 <body>
 <h1>
-    <a href="#">创建帖子</a>
+    <a href="{% url 'blog:editpage' 0 %}">创建帖子</a>
 </h1>
 {% for article in articles %}
-    <a href="#">{{ article.title }}</a>
+    <a href="{% url 'blog:page' article.id%}">{{ article.title }}</a>
     <br/>
 
 {% endfor %}
